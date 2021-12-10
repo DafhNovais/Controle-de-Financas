@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8191E4;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+#campo-lancamento {
+    background-color: #f1f1f1;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    padding: 25px 25px 0;
+    width: 65%;
+    height: 100%;
+    top: 38%;
+}
+
+#filtro {
+    display: inline-flex;
+    justify-content: center;
+    margin: 1% 3% 3%;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: space-between;
+    color: #808080;
+    width: 96%;
+}
+
+
+input {
+    border-bottom: 2px solid #808080;
+}
+
+input::placeholder {
+    color: #C4C4C4;
+}
+
+#De, #Ate {
+    outline: none;
+    border: none;
+    display: inline;
+    background: none;
+    width: 170px;
+    font-size: 16px;
+    border-bottom: 2px solid #808080;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    color: #808080;
+}
+
+#titulos{
+    justify-content: space-between;
+    color: #808080;
+    margin: 1%;
+    padding: 0 8%;
+}
+
+#box{
+    background-color: rgb(230, 230, 230);
+    padding: 1% 2% 9%;
+    border-radius: 15px 15px 0 0;
+}
+
+.card{
+    height: 60px;
+    color: #636363;
+    background: #f5f5f5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+}
+
+.grid{
+    display: inline-grid;
+    grid-template-columns: 25% 25%  25% 25% ;
+    width: 100%;
+}
+.negativo{
+    box-shadow: inset 0px -2px 1px rgba(255, 26, 26, 0.25);
+}
+.positivo{
+    box-shadow: inset 0px -2px 1px #51F676;
+}
+ul li{
+    list-style-type: none;
+    display: inline; 
+}
+
+.bn{
+    background: none;
+    border-radius: 30%;
+    border: none;
+    user-select: none;
+    margin:  0 .9rem;
+    width: 22px;
+    height: 22px;
+}
+
+.bn:hover{
+    background: rgb(230, 230, 230);
+    transition: background 1s;
+    cursor: pointer;
+}
+
+.fa-pencil{
+    color: rgb(46, 46, 46);
+}
+.fa-trash{
+    color: rgb(202, 39, 39);
+}
+
+.btn-rounded{
+    width: 23rem;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    color: #f1f1f1;
+    background: #8191E4;
+    box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn-rounded:hover{
+    cursor: pointer;
+    box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.25);
+    background: #8fa1fc;
+    transition: background 1s;
+}
+
+#containerBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#addLancamento{
+    width: 40%;
+    position: absolute;
+    top: 52%;
+    z-index: 3;
+}
+
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 45%;
+    min-width: 14rem;
+    margin: 0px 0.7rem 8px;
+}
+
+.scroll::-webkit-scrollbar{
+    width: 0.6rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: rgb(230, 230, 230);
+}
+  
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #8191E4;
+    border-radius: 1rem;
+}
+
+/****margens******/
+.mt-1{
+    margin-top: 1rem;
+}
+
+
+@media (max-width: 700px)  {
+    
+#campo-lancamento {
+    padding:5px;
+    width: 90%;
+    top: 48%;
+    font-size: 14px;
+}
+#addLancamento{
+    width: 50%;
+    top: 42%;
+}
+
+#box{
+    background-color: rgb(230, 230, 230);
+    padding-bottom: 22%;
+    border-radius: 15px 15px 0 0;
+}
+
+#filtro {
+    margin: 3%;
+    padding: 0 3%;
+    width: 96%;
+    font-size: 14px;
+}
+
+#De, #Ate {
+    width: 75%;
+    font-size: 14px;
+}
+
+.bn{
+    background: none;
+    border-radius: 30%;
+    border: none;
+    user-select: none;
+    margin:  0 .4rem;
+    width: 20px;
+    height: 20px;
+}
+
+}
