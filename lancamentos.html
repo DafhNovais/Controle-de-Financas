@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lancamentos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Meus Lançamentos</title>
+</head>
+
+<body>
+
+    <div id="campo-lancamento">
+        <div id="filtro">
+            <h5>Filtro por data</h5>
+            <span>|</span>
+
+            <div class="input">
+                <label for="De">De:</label>
+                <input type="date" id="De" placeholder="dd/mm/aaaa">
+            </div>
+            <div class="input">
+                <label for="Ate">Até:</label>
+                <input type="date" id="Ate" placeholder="dd/mm/aaaa">
+            </div>
+
+        </div>
+
+        <div>
+            <ul id="titulos" class="grid">
+                <li>
+                    <h5>Titulo</h5>
+                </li>
+                <li>
+                    <h5>Valor</h5>
+                </li>
+                <li>
+                    <h5>Data</h5>
+                </li>
+            </ul>
+        </div>
+
+        <section class="mt-1 scroll">
+            <div id="box">
+                <div class="card negativo">
+                    <ul class="grid">
+                        <li>
+                            <h5>Coxinha</h5>
+                        </li>
+                        <li>
+                            <h5>- R$3,50</h5>
+                        </li>
+                        <li>
+                            <h5>16/05/2021</h5>
+                        </li>
+                        <li class="">
+                            <button class="bn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                            <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="card positivo">
+                    <ul class="grid">
+                        <li>
+                            <h5>Venda do Pocket</h5>
+                        </li>
+                        <li>
+                            <h5>R$450,00</h5>
+                        </li>
+                        <li>
+                            <h5>06/12/2020</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card negativo">
+                    <ul class="grid">
+                        <li>
+                            <h5>batata frita</h5>
+                        </li>
+                        <li>
+                            <h5>R$123,00</h5>
+                        </li>
+                        <li>
+                            <h5>05/11/2020</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card positivo">
+                    <ul class="grid">
+                        <li>
+                            <h5>investimento</h5>
+                        </li>
+                        <li>
+                            <h5>R$65,97</h5>
+                        </li>
+                        <li>
+                            <h5>01/04/2020</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div id="containerBtn">
+            <button id="addLancamento" class="btn-rounded">Novo lançamento</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
