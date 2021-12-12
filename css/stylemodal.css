@@ -1,0 +1,89 @@
+.backFon{
+  position: absolute;
+  width: 65%;
+  top: 24.5%;
+  z-index: 4;
+  text-align: center;
+  height: 600px;
+  background-color: #f1f1f1;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  padding: 2rem 4rem;
+  color: #808080;
+  font-size: 16px;
+  display: none;
+  animation: animate;
+  animation-duration: 800ms;
+  }
+
+@keyframes animate{
+  from{opacity: 1;}
+  from{opacity: 0;}
+}
+
+#add{
+  width: 40%;
+    position: absolute;
+    top: 52%;
+    z-index: 3;
+}
+
+.novolancamento{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display:inline-block;
+  text-align: start;
+  padding: 1rem;
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.mt-2{
+  margin-top: 2rem;
+}
+
+.ms-5 {
+  margin-left: 5rem;
+}
+
+.mb-2{
+  margin-bottom: 2rem;
+}
+
+.bbg {
+  width: 100%;
+}
+
+#blk{
+  display: inline-block;
+  text-decoration: none;
+  color: #808080;
+}
+
+input {
+  margin: .8rem 0;
+  border: none;
+  outline: none;
+  color: #808080;
+  
+  background: none;
+  border-bottom: 2px solid #808080;
+}
+
+#num {
+  border: none;
+  outline: none;
+  color: #808080;
+  background: none;
+  border-bottom: 2px solid #808080;
+  text-align: center;
+}
+  
