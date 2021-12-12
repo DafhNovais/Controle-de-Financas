@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/lancamentos.css">
-  <link rel="stylesheet" href="/css/stylemodal.css">
+  <link rel="stylesheet" href="css/lancamentos.css">
+  <link rel="stylesheet" href="css/stylemodal.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +15,7 @@
 <body>
   <header>
     <nav class="nav">
-      <img src="../assets/PigDin Logo.webp" alt="LogoPigDin">
+      <img src=".\assets\PigDin Logo.webp" alt="LogoPigDin">
     </nav>
     <div id="visorSaldo">
       <h4>Meu saldo</h4>
@@ -69,7 +69,7 @@
               <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
             </li>
           </ul>
-        </div>
+        </div>-->
         <div class="card positivo">
           <ul class="grid">
             <li>
@@ -106,7 +106,7 @@
 
 </body>
   <!------Modal------>
-  <div class="backFon">
+  <div class="backFon" id='acaoFechar'>
     <div class="modal">
       <div>
         <form action="	" method="post" class="form">
@@ -117,27 +117,28 @@
 
           <div class="mb-2">
               <label for="	">Valor</label>
-              <input type="text" name="" id="" placeholder="ex.: R$ 50,00" >
+              <input type="text" name="" id="valor" placeholder="ex.: R$ 50,00" >
               <label class="ms-5" for="	">Data</label>
-              <input type="datetime-local" name="" id="">
+              <input type="date" name="" id="dia">
           </div>
           <div class="">
               <label for="	">Titulo do lançamento</label>
-              <input class="bbg" type="text" name="" id="" placeholder="ex.: Coxinha">
+              <input class="bbg" type="text" name="" id="titulo" placeholder="ex.: Coxinha">
           </div>
 
           <div class="child mb-2">
-              <input type="radio" name="empleoactual" value="Entrada de Dinheiro"> Entrada de Dinheiro
-              <input class="ms-5" type="radio" name="empleoactual" value="Saida de Dinheiro"> Saida de Dinheiro
+              <input type="radio" name="empleoactual" id='entrada' value="Entrada de Dinheiro"> Entrada de Dinheiro
+              <input class="ms-5" type="radio" name="empleoactual" id='saida' value="Saida de Dinheiro"> Saida de Dinheiro
           </div>
       </form>
       <div>
             <div>
-              <button class="btn-rounded">Novo lançamento</button>
+              <button class="btn-rounded" id='botao'>Novo lançamento</button>
           </div>
-          <a onclick="fechar()" id="blk" class="mt-1" href="">Cancelar</a>
+             <a onclick="fechar()" id="blk" class="mt-1" href="">Cancelar</a>
         </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/Dados.js"></script>
 </html>
