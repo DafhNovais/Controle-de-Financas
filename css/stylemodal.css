@@ -86,4 +86,20 @@ input {
   border-bottom: 2px solid #808080;
   text-align: center;
 }
+
+@media (max-width: 700px)  {
+  .backFon{
+    position: absolute;
+    width: 90%;
+    top: 22%;
+    padding: 2rem 2rem;
+  }
+  .ms-5 {
+    margin-left: 1rem;
+  }
+  .btn-rounded{
+    width: 12rem;
+}
+}
+    
   
