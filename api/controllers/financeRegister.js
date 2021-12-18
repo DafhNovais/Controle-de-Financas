@@ -5,6 +5,10 @@ module.exports = app => {
         financeRegister.list(res);
     });
 
+    app.get('/finance-register/total', (req, res) => {
+        financeRegister.total(res);
+    })
+    
     app.get('/finance-register/:id', (req, res) => {
         const id = parseInt(req.params.id)
 
