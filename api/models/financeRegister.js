@@ -18,7 +18,7 @@ class FinanceRegister {
     }
 
     list(res) {
-        const sql = 'SELECT * FROM finances'
+        const sql = "SELECT id, titulo, lancamento, DATE_FORMAT(dia, '%d/%m/%Y') AS dia FROM finances";
 
         connection.query(sql, (error, result) => {
             if(error) {
