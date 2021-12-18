@@ -42,6 +42,19 @@ class FinanceRegister {
         });
     }
 
+    total(res) {
+        const sql = 'SELECT SUM(lancamento) AS total FROM finances'
+
+        connection.query(sql, (error, result) => {
+            const total = result[0];
+            if(error) {
+                res.status(400).json(error);
+            } else {
+                res.status(200).json(total);
+            }
+        });
+    }
+
     change(id, values, res) {
         if(values.dia) {
             values.dia = moment(values.dia, 'DD/MM/YYYY').format('YYYY-MM-DD');
