@@ -4,7 +4,7 @@ const connection = require('../infrastructure/connection');
 class FinanceRegister {
     add(financeRegister, res) {
         // const dataCriacao = moment().format('YYYY-MM-DD HH:mm:ss');
-        const dia = moment(financeRegister.dia, 'DD/MM/YYYY').format('YYYY-MM-DD');
+        const dia = moment(financeRegister.dia, 'YY/YY/MMDD').format('YYYY-MM-DD');
         const registerDate = {...financeRegister, dia}
         const sql = 'INSERT INTO finances SET ?'
 
