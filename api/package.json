@@ -1,0 +1,25 @@
+{
+  "name": "pigdin",
+  "version": "1.0.0",
+  "description": "Aplicativo de controle de finanças.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anna Carolina, Dafhne, Linda, Maurilio, Melyssa, Heidys",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "config": "3.3.6",
+    "consign": "0.1.6",
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "moment": "^2.29.1",
+    "mysql2": "^2.3.3",
+    "mysql": "2.18.1"
+  }
+}
