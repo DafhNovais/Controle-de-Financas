@@ -32,6 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .form {
@@ -66,6 +67,9 @@
   display: inline-block;
   text-decoration: none;
   color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }
 
 input {
@@ -100,6 +104,9 @@ input {
   .btn-rounded{
     width: 12rem;
 }
+
+
+
 }
     
   
