@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/lancamentos.css">
   <link rel="stylesheet" href="css/stylemodal.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />  
   <title>Meus Lançamentos</title>
 </head>
 
@@ -23,20 +24,7 @@
     </div>
   </header>
   <div id="campo-lancamento">
-    <div id="filtro">
-      <h5>Filtro por data</h5>
-      <span>|</span>
-
-      <div class="input">
-        <label for="De">De:</label>
-        <input type="date" id="De" placeholder="dd/mm/aaaa">
-      </div>
-      <div class="input">
-        <label for="Ate">Até:</label>
-        <input type="date" id="Ate" placeholder="dd/mm/aaaa">
-      </div>
-    </div>
-
+  
     <div>
       <ul id="titulos" class="grid">
         <li>
@@ -67,9 +55,10 @@
             <li class="">
               <button class="bn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
               <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
-            </li>
+<!--          <button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>
+ -->            </li>
           </ul>
-        </div>-->
+        </div>
         <div class="card positivo">
           <ul class="grid">
             <li>
@@ -84,7 +73,8 @@
             <li class="">
               <button class="bn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
               <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
-            </li>
+<!--               <button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>
+ -->            </li>
           </ul>
         </div>
         <div  class="content">
@@ -109,35 +99,34 @@
   <div class="backFon" id='acaoFechar'>
     <div class="modal">
       <div>
-        <form action="	" method="post" class="form">
-          <div class="mb-2">
-              <label for="	"><h4>Seu saldo</h4></label>
-              <h3 id="num">R$ 0,00</h3>
-          </div>
+        <form action="	" id= "formulario" method="post" name="formulario"class="form">
 
           <div class="mb-2">
               <label for="	">Valor:</label>
-              <input type="text" name="" id="valor" placeholder="ex.: R$ 50,00" >
+              <input required type="number" name="valor" id="valor" placeholder="ex.: R$ 50,00" required >
               <label class="ms-5" for="	">Data:</label>
-              <input type="date" name="" id="dia">
+              <input type="date" name="data" id="dia" required>
           </div>
           <div class="">
               <label for="	">Titulo do lançamento</label>
-              <input class="bbg" type="text" name="" id="titulo" placeholder="ex.: Coxinha">
+              <input class="bbg" type="text" name="titulo" id="titulo" required placeholder="ex.: Coxinha">
           </div>
-
+        
           <div class="child mb-2">
-              <input type="radio" name="empleoactual" id='entrada' value="Entrada de Dinheiro"> Entrada de Dinheiro
-              <input class="ms-5" type="radio" name="empleoactual" id='saida' value="Saida de Dinheiro"> Saida de Dinheiro
+              <input type="radio" name="movimentodinheiro" id='entrada' value="Entrada de Dinheiro"> Entrada de Dinheiro
+              <input class="ms-5" type="radio" name="movimentodinheiro" id='saida' value="Saida de Dinheiro"> Saida de Dinheiro
           </div>
-      </form>
-      <div>
+          <div class="final">
+            <button type="button" class="btn-rounded" id='botao'>Novo lançamento</button>
+            </div>
             <div>
-              <button class="btn-rounded" id='botao'>Novo lançamento</button>
-          </div>
              <a onclick="fechar()" id="blk" class="mt-1" href="">Cancelar</a>
         </div>
-    </div>
+      </div>
+      </form>
+     </div>
+     </div>
+     </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/Dados.js"></script>
