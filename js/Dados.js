@@ -12,6 +12,7 @@ var novoElemento = document.createElement('div')
 var total = document.getElementById('total')
 titulos.style.display = 'none'
 
+
 function saldoTotal() {
   fetch('http:localhost:3004/finance-register/total').then((saldo) => {
     return saldo.json()
@@ -46,8 +47,9 @@ function tiraSinalDesign (numero) {
 }
 
 
-function custoOuAquisicao () {
-  var validador = entrada.checked === true? parseFloat(valor.value): valor.value * -1
+function custoOuAquisicao (numeroNovo) {
+  var trocandoVirgula = numeroNovo.toString().indexOf(',') == -1? numeroNovo: numeroNovo.toString().replace(',', '.')
+  var validador = entrada.checked === true? parseFloat(/*valor.value*/trocandoVirgula): parseFloat(trocandoVirgula * -1)
   return validador
 }
 
@@ -100,7 +102,7 @@ function adicionandoCard () {
   botao2.appendChild(icon2)
   liLista4.dataset.columns = dadoEspecifico[dadoEspecifico.length -1].id
   conteudoTitulo.innerText = dadoEspecifico[dadoEspecifico.length -1].titulo
-  conteudoValor.innerText = 'R$ '+ tiraSinalDesign(dadoEspecifico[dadoEspecifico.length -1].lancamento)/*dadoEspecifico[dadoEspecifico.length -1].lancamento.toString()*/
+  conteudoValor.innerText = 'R$ '+ tiraSinalDesign((dadoEspecifico[dadoEspecifico.length -1].lancamento))
   conteudoTituloData.innerText = dadoEspecifico[dadoEspecifico.length -1].dia
   var eliminacaoCard = document.getElementById(dadoEspecifico[dadoEspecifico.length -1].id + dadoEspecifico[dadoEspecifico.length -1].id + dadoEspecifico[dadoEspecifico.length -1].id) 
 
@@ -123,7 +125,10 @@ var atoDeEditar = new Promise (function (aceitar, rejeitar) {
         var inputDia = document.createElement('input')
         inputDia.id = dadoEspecifico[dadoEspecifico.length -1].id *9
         var botaoAprovado = document.createElement('button')
-        botaoAprovado.innerHTML = 'confirma'
+        botaoAprovado.className = 'bn'
+        var iconAprovado = document.createElement('i')
+        iconAprovado.className = "fa-solid fa-check"
+        /*botaoAprovado.innerHTML = 'confirma'*/
         inputTitulo.value = dadoEspecifico[dadoEspecifico.length -1].titulo
         inputlancamento.value = dadoEspecifico[dadoEspecifico.length -1].lancamento
         inputDia.value = dadoEspecifico[dadoEspecifico.length -1].dia
@@ -132,6 +137,7 @@ var atoDeEditar = new Promise (function (aceitar, rejeitar) {
         liLista.appendChild(inputTitulo)
         liLista2.appendChild(inputlancamento)
         liLista3.appendChild(inputDia)
+        botaoAprovado.appendChild(iconAprovado)
         liLista4.appendChild(botaoAprovado)
         botaoAprovado.id = dadoEspecifico[dadoEspecifico.length -1].id *10
         console.log('Deu certo')
@@ -152,7 +158,7 @@ var atoDeEditar = new Promise (function (aceitar, rejeitar) {
     var inputlancamentoConfirma = document.getElementById(dadoEspecifico[dadoEspecifico.length -1].id *8)
     var inputDiaConfirma = document.getElementById(dadoEspecifico[dadoEspecifico.length -1].id *9)
     novoConteudoTitulo.innerText = inputTituloConfirma.value
-    novoConteudoValor.innerText = 'R$ '+ tiraSinalDesign(inputlancamentoConfirma.value) /*${inputlancamentoConfirma.value}*/
+    novoConteudoValor.innerText = 'R$ '+ tiraSinalDesign(inputlancamentoConfirma.value) 
     novoConteudoDia.innerText = inputDiaConfirma.value
     caixaNegativa.className = corCardPosEdicao(inputlancamentoConfirma.value)
 
@@ -171,9 +177,10 @@ var atoDeEditar = new Promise (function (aceitar, rejeitar) {
       return atualizacao.json()
     }).then((result) => {
       console.log(result)
+      return saldoTotal()
     })
 
-    saldoTotal()
+    /*saldoTotal()*/
 
     inputTituloConfirma.style.display = 'none'
     inputlancamentoConfirma.style.display ='none'
@@ -216,38 +223,56 @@ var atoDeEditar = new Promise (function (aceitar, rejeitar) {
     botao.addEventListener('click', function (padrao) {
        padrao.preventDefault()
 
-       var postar = {
-        method:'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({  
-          titulo:titulo.value,
-        lancamento:custoOuAquisicao(),
-        dia:dia.value})
-        }
+       function formatacaoEMetodo () {
+         var mensagemCampos = document.getElementById('mensagemCampos')
+         mensagemCampos.style.color = 'red'
+        if (titulo.value == '' || dia.value == '' || valor.value == '' || entrada.checked == false && saida.checked == false) {
+          mensagemCampos.innerText = '* Preencha todos os campos '
+         console.log('em branco')
+        } else if (titulo.value.length >= 51) {
+          mensagemCampos.innerText = '* Somente até 50 caracteres no campo Titulo '
+         console.log('STRING NÃO passou')
+         
+       } else if (valor.value.toString().length >= 13) {
+         mensagemCampos.innerText = '* Somente até 12 caracteres no campo Valor '
+        console.log('Valor não passou passou')
+        
+       } else {
+        var postar = {
+          method:'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({  
+            titulo:titulo.value,
+          lancamento:custoOuAquisicao(valor.value),
+          dia:dia.value})
+          }
+    
+         fetch('http:localhost:3004/finance-register', postar).then((res) => {
+           return res.json()
+         }).then((dados) => {
+           console.log(dados)
+           return adicionandoCard()
+         })
+    
+         titulo.value = ''
+         dia.value = ''
+         valor.value = ''
+         entrada.checked = false
+         saida.checked = false
+    
+         fechaModal.style.display = 'none'
+         aceito(mensagemVazia) 
+        rejeitado(console.log('deu um errinho'))
+        
+       }
+      }
 
-       fetch('http:localhost:3004/finance-register', postar).then((res) => {
-         return res.json()
-       }).then((dados) => {
-         console.log(dados)
-         return adicionandoCard()
-       })
-
-       titulo.value = ''
-       dia.value = ''
-       valor.value = ''
-       entrada.checked = false
-       saida.checked = false
-
-       fechaModal.style.display = 'none'
-       aceito(mensagemVazia) 
-      rejeitado(console.log('deu um errinho'))
-
-      }) 
+      formatacaoEMetodo()
+    })
   }).then((mensagem) => {
     mensagem.style.display = 'none'
   })
-
 
   

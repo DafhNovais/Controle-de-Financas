@@ -20,7 +20,7 @@
     </nav>
     <div id="visorSaldo">
       <h4>Meu saldo</h4>
-      <h3>0,00</h3>
+      <h3 id ='total'>0,00</h3>
     </div>
   </header>
   <div id="campo-lancamento">
@@ -55,8 +55,8 @@
             <li class="">
               <button class="bn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
               <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
-<!--          <button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>
- -->            </li>
+         <!--<button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>-->
+         </li>
           </ul>
         </div>
         <div class="card positivo">
@@ -73,8 +73,8 @@
             <li class="">
               <button class="bn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
               <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
-<!--               <button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>
- -->            </li>
+               <!--<button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>-->
+          </li>
           </ul>
         </div>
         <div  class="content">
@@ -117,6 +117,7 @@
               <input type="radio" name="empleoactual" id='entrada' value="Entrada de Dinheiro"> Entrada de Dinheiro
               <input class="ms-5" type="radio" name="empleoactual" id='saida' value="Saida de Dinheiro"> Saida de Dinheiro
           </div>
+          <h4 id='mensagemCampos'></h4>
           <div class="final">
             <button type="button" class="btn-rounded" id='botao'>Novo lançamento</button>
             </div>

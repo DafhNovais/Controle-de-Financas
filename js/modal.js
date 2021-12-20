@@ -11,16 +11,16 @@ function fechar(){
 }
 
 
-var primero= document.getElementById("botao");
+/*var primero= document.getElementById("botao");
 
 primero.addEventListener("click", validar);
 
 function validar (){
 
-  var valor= formulario.valor.value;
-  var data= formulario.data.value;
-  var titulo= formulario.titulo.value;
-  var validarcheck = document.forms["formulario"]["empleoactual"];
+  let valor= formulario.valor.value;
+  let data= formulario.data.value;
+  let titulo= formulario.titulo.value;
+  let validarcheck = document.forms["formulario"]["empleoactual"];
 
 
   
@@ -48,11 +48,11 @@ if (titulo=="" || titulo.length >=51){
 if (validarcheck[0].checked==false && validarcheck[1].checked ==false){
   alert('preencher o campo de entrada ou saída de dinheiro')
 
-}else{
+}/*else{
 
     return true;
   
   
   }
-  }
+  }*/
 
