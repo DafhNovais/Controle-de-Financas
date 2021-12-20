@@ -27,7 +27,9 @@ O PIGDIN é uma aplicação web para controle de finanças. O sistema permite qu
 ## 📁 Acesso ao projeto
 Você pode acessar o <a href="https://github.com/DafhNovais/Controle-de-Financas/find/main">código fonte</a> do projeto inicial. 
 
-## 🛠️ Abrir e rodar o projeto
+## 🛠️ Como contribuir para o projeto?
+
+* É necessário ter o Node.js e o MYSQL instalados na sua máquina.
 * Você vai precisar clonar o repositório localmente na sua máquina.
 * Criar um banco de dados MYSQL com o nome PIG_DIN. 
   Obs.: a tabela será criada automaticamente quando o servidor for inicializado.
