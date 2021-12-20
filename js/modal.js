@@ -20,6 +20,8 @@ function validar (){
   var valor= formulario.valor.value;
   var data= formulario.data.value;
   var titulo= formulario.titulo.value;
+  var validarcheck = document.forms["formulario"]["empleoactual"];
+
 
   
 
@@ -41,11 +43,16 @@ if (titulo=="" || titulo.length >=51){
     formulario.titulo.focus();
     return false;
 
+}
+
+if (validarcheck[0].checked==false && validarcheck[1].checked ==false){
+  alert('preencher o campo de entrada ou saída de dinheiro')
+
 }else{
 
-  return true;
-
-
-}
-}
+    return true;
+  
+  
+  }
+  }
 

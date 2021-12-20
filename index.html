@@ -20,7 +20,7 @@
     </nav>
     <div id="visorSaldo">
       <h4>Meu saldo</h4>
-      <h3 id ='total'>0,00</h3>
+      <h3>0,00</h3>
     </div>
   </header>
   <div id="campo-lancamento">
@@ -41,8 +41,44 @@
 
     <section class="mt-1 scroll">
       <div id="box">
+        <div class="card negativo">
+          <ul class="grid">
+            <li>
+              <h5>Coxinha</h5>
+            </li>
+            <li>
+              <h5>- R$3,50</h5>
+            </li>
+            <li>
+              <h5>16/05/2021</h5>
+            </li>
+            <li class="">
+              <button class="bn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+              <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+<!--          <button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>
+ -->            </li>
+          </ul>
+        </div>
+        <div class="card positivo">
+          <ul class="grid">
+            <li>
+              <h5>Coxinha</h5>
+            </li>
+            <li>
+              <h5>- R$3,50</h5>
+            </li>
+            <li>
+              <h5>16/05/2021</h5>
+            </li>
+            <li class="">
+              <button class="bn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+              <button class="bn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+<!--               <button class="bn"><i class="fa-solid fa-check" aria-hidden="true"></i></button>
+ -->            </li>
+          </ul>
+        </div>
         <div  class="content">
-          <div hidden id="semLancamento">
+          <div id="semLancamento">
             <h5>
               Você não possui novos lançamentos! :(
               <br>
@@ -67,9 +103,10 @@
 
           <div class="mb-2">
               <label for="	">Valor:</label>
-              <input required type="number" name="valor" id="valor" placeholder="ex.: R$ 50,00" required >
+              <input required type="text" name="valor" id="valor" placeholder="ex.: R$ 50,00" required >
               <label class="ms-5" for="	">Data:</label>
               <input type="date" name="data" id="dia" required>
+            
           </div>
           <div class="">
               <label for="	">Titulo do lançamento</label>
@@ -77,8 +114,8 @@
           </div>
         
           <div class="child mb-2">
-              <input type="radio" name="movimentodinheiro" id='entrada' value="Entrada de Dinheiro"> Entrada de Dinheiro
-              <input class="ms-5" type="radio" name="movimentodinheiro" id='saida' value="Saida de Dinheiro"> Saida de Dinheiro
+              <input type="radio" name="empleoactual" id='entrada' value="Entrada de Dinheiro"> Entrada de Dinheiro
+              <input class="ms-5" type="radio" name="empleoactual" id='saida' value="Saida de Dinheiro"> Saida de Dinheiro
           </div>
           <div class="final">
             <button type="button" class="btn-rounded" id='botao'>Novo lançamento</button>
@@ -92,7 +129,6 @@
      </div>
      </div>
 
-    <!--<script type="module" src="./controller/listFinances-controller.js"></script>-->
     <script src="./js/modal.js"></script>
     <script src="./js/Dados.js"></script>
 </html>
