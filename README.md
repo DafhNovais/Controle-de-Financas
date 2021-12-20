@@ -23,8 +23,9 @@ O PIGDIN é uma aplicação web para controle de finanças. O sistema permite qu
 <div>
   <h3>Protótipos feitos com o Figma: </h3>
   
-  <a href="https://www.figma.com/proto/hKOUclaCnRiLhF4BBDvZV9/PigDin-%2F-TC-Tech-Talents?page-id=10%3A103&node-id=10%3A104&viewport=241%2C48%2C0.11&scaling=min-zoom&starting-point-node-id=10%3A104">💻 Desktop</a> <br>
   <a href="https://www.figma.com/proto/hKOUclaCnRiLhF4BBDvZV9/PigDin-%2F-TC-Tech-Talents?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.22&scaling=scale-down&starting-point-node-id=2%3A2">📱 Mobile</a>
+  
+  <a href="https://www.figma.com/proto/hKOUclaCnRiLhF4BBDvZV9/PigDin-%2F-TC-Tech-Talents?page-id=10%3A103&node-id=10%3A104&viewport=241%2C48%2C0.11&scaling=min-zoom&starting-point-node-id=10%3A104">💻 Desktop</a> <br>
 </div>
 
 ## Tecnologias utilizadas
