@@ -20,6 +20,13 @@ O PIGDIN é uma aplicação web para controle de finanças. O sistema permite qu
   <img src="https://user-images.githubusercontent.com/64945452/146772973-cd000152-208c-475a-adae-f6ffd39ee66b.gif" alt="Demonstração" width="360" height="255"> <img        src="https://user-images.githubusercontent.com/64945452/146775122-c778df3e-b895-4466-913d-1f83dd08c551.gif" alt="Demonstração" width="360" height="255">
 </div>
 
+<div>
+  <h3>Protótipos feitos com o Figma: </h3>
+  
+  <a href="https://www.figma.com/proto/hKOUclaCnRiLhF4BBDvZV9/PigDin-%2F-TC-Tech-Talents?page-id=10%3A103&node-id=10%3A104&viewport=241%2C48%2C0.11&scaling=min-zoom&starting-point-node-id=10%3A104">Desktop</a>
+  <a href="https://www.figma.com/proto/hKOUclaCnRiLhF4BBDvZV9/PigDin-%2F-TC-Tech-Talents?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.22&scaling=scale-down&starting-point-node-id=2%3A2">Mobile</a>
+</div>
+
 ## Tecnologias utilizadas
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width="60" height="60"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width="60" height="60"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60" height="60"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" width="60" height="60"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" width="60" height="60"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width="60" height="60">
